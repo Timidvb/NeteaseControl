@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+
+	<!-- declare the namespace for using XInclude so we can include the standard suite -->
+<dictionary xmlns:xi="http://www.w3.org/2003/XInclude">
+
+	<suite name="Simple Scripting Verbs" code="SVrb" description="Terminology for the SimpleScriptingVerbs Sample.">
+
+		<command name="do all command" code="MctrlAll" description="Display whatever muisic status that is collected.">
+			<cocoa class="AllCommand"/>
+			<result type="text" description="Music status."/>
+		</command>
+		
+		<command name="do direct command" code="MctrlDir" description="Display selected app's music status.">
+			<cocoa class="DirectCommand"/>
+			<direct-parameter description="a text parameter passed to the command">
+				<type type="text"/>
+			</direct-parameter>
+			<result type="text" description="the direct parameter enclosed in quotes"/>
+		</command>
+		
+	</suite>
+
+</dictionary>

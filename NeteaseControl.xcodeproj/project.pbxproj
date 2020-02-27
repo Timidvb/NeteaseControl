@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		748B189A240680F300AA2C4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B1899240680F300AA2C4B /* AppDelegate.m */; };
+		748B189C240680F400AA2C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 748B189B240680F400AA2C4B /* Assets.xcassets */; };
+		748B189F240680F400AA2C4B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748B189D240680F400AA2C4B /* MainMenu.xib */; };
+		748B18A2240680F400AA2C4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B18A1240680F400AA2C4B /* main.m */; };
+		748B18AD240680F400AA2C4B /* NeteaseControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B18AC240680F400AA2C4B /* NeteaseControlTests.m */; };
+		748B18B8240680F500AA2C4B /* NeteaseControlUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B18B7240680F500AA2C4B /* NeteaseControlUITests.m */; };
+		748B18C92406810B00AA2C4B /* AllCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B18C62406810B00AA2C4B /* AllCommand.m */; };
+		748B18CA2406810B00AA2C4B /* DirectCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B18C82406810B00AA2C4B /* DirectCommand.m */; };
+		748B18D02406813D00AA2C4B /* NowPlayingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B18CE2406813D00AA2C4B /* NowPlayingHelper.m */; };
+		748B18D12406813D00AA2C4B /* NowPlayingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 748B18CF2406813D00AA2C4B /* NowPlayingItem.m */; };
+		748B18D32406816100AA2C4B /* MusicControl.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 748B18D22406816100AA2C4B /* MusicControl.sdef */; };
+		748B18D62406819400AA2C4B /* MediaRemote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 748B18D52406819400AA2C4B /* MediaRemote.framework */; };
+		748B18D72406819400AA2C4B /* MediaRemote.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 748B18D52406819400AA2C4B /* MediaRemote.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		748B18A9240680F400AA2C4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 748B188D240680F300AA2C4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 748B1894240680F300AA2C4B;
+			remoteInfo = NeteaseControl;
+		};
+		748B18B4240680F500AA2C4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 748B188D240680F300AA2C4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 748B1894240680F300AA2C4B;
+			remoteInfo = NeteaseControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		748B18D82406819400AA2C4B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				748B18D72406819400AA2C4B /* MediaRemote.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		748B1895240680F300AA2C4B /* NeteaseControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeteaseControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		748B1898240680F300AA2C4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		748B1899240680F300AA2C4B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		748B189B240680F400AA2C4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		748B189E240680F400AA2C4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		748B18A0240680F400AA2C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		748B18A1240680F400AA2C4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		748B18A3240680F400AA2C4B /* NeteaseControl.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NeteaseControl.entitlements; sourceTree = "<group>"; };
+		748B18A8240680F400AA2C4B /* NeteaseControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeteaseControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		748B18AC240680F400AA2C4B /* NeteaseControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeteaseControlTests.m; sourceTree = "<group>"; };
+		748B18AE240680F500AA2C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		748B18B3240680F500AA2C4B /* NeteaseControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeteaseControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		748B18B7240680F500AA2C4B /* NeteaseControlUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeteaseControlUITests.m; sourceTree = "<group>"; };
+		748B18B9240680F500AA2C4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		748B18C52406810B00AA2C4B /* AllCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllCommand.h; sourceTree = "<group>"; };
+		748B18C62406810B00AA2C4B /* AllCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllCommand.m; sourceTree = "<group>"; };
+		748B18C72406810B00AA2C4B /* DirectCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectCommand.h; sourceTree = "<group>"; };
+		748B18C82406810B00AA2C4B /* DirectCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectCommand.m; sourceTree = "<group>"; };
+		748B18CB2406813D00AA2C4B /* MRMediaRemote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRMediaRemote.h; sourceTree = "<group>"; };
+		748B18CC2406813D00AA2C4B /* NowPlayingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowPlayingHelper.h; sourceTree = "<group>"; };
+		748B18CD2406813D00AA2C4B /* NowPlayingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowPlayingItem.h; sourceTree = "<group>"; };
+		748B18CE2406813D00AA2C4B /* NowPlayingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowPlayingHelper.m; sourceTree = "<group>"; };
+		748B18CF2406813D00AA2C4B /* NowPlayingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowPlayingItem.m; sourceTree = "<group>"; };
+		748B18D22406816100AA2C4B /* MusicControl.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = MusicControl.sdef; sourceTree = "<group>"; };
+		748B18D52406819400AA2C4B /* MediaRemote.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaRemote.framework; path = ../../../../System/Library/PrivateFrameworks/MediaRemote.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		748B1892240680F300AA2C4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				748B18D62406819400AA2C4B /* MediaRemote.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		748B18A5240680F400AA2C4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		748B18B0240680F500AA2C4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		748B188C240680F300AA2C4B = {
+			isa = PBXGroup;
+			children = (
+				748B1897240680F300AA2C4B /* NeteaseControl */,
+				748B18AB240680F400AA2C4B /* NeteaseControlTests */,
+				748B18B6240680F500AA2C4B /* NeteaseControlUITests */,
+				748B1896240680F300AA2C4B /* Products */,
+				748B18D42406819300AA2C4B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		748B1896240680F300AA2C4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				748B1895240680F300AA2C4B /* NeteaseControl.app */,
+				748B18A8240680F400AA2C4B /* NeteaseControlTests.xctest */,
+				748B18B3240680F500AA2C4B /* NeteaseControlUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		748B1897240680F300AA2C4B /* NeteaseControl */ = {
+			isa = PBXGroup;
+			children = (
+				748B1898240680F300AA2C4B /* AppDelegate.h */,
+				748B1899240680F300AA2C4B /* AppDelegate.m */,
+				748B18DA2406839000AA2C4B /* ScriptSupport */,
+				748B18D92406837000AA2C4B /* NowPlaying */,
+				748B189B240680F400AA2C4B /* Assets.xcassets */,
+				748B189D240680F400AA2C4B /* MainMenu.xib */,
+				748B18A0240680F400AA2C4B /* Info.plist */,
+				748B18A1240680F400AA2C4B /* main.m */,
+				748B18D22406816100AA2C4B /* MusicControl.sdef */,
+				748B18A3240680F400AA2C4B /* NeteaseControl.entitlements */,
+			);
+			path = NeteaseControl;
+			sourceTree = "<group>";
+		};
+		748B18AB240680F400AA2C4B /* NeteaseControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				748B18AC240680F400AA2C4B /* NeteaseControlTests.m */,
+				748B18AE240680F500AA2C4B /* Info.plist */,
+			);
+			path = NeteaseControlTests;
+			sourceTree = "<group>";
+		};
+		748B18B6240680F500AA2C4B /* NeteaseControlUITests */ = {
+			isa = PBXGroup;
+			children = (
+				748B18B7240680F500AA2C4B /* NeteaseControlUITests.m */,
+				748B18B9240680F500AA2C4B /* Info.plist */,
+			);
+			path = NeteaseControlUITests;
+			sourceTree = "<group>";
+		};
+		748B18D42406819300AA2C4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				748B18D52406819400AA2C4B /* MediaRemote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		748B18D92406837000AA2C4B /* NowPlaying */ = {
+			isa = PBXGroup;
+			children = (
+				748B18CB2406813D00AA2C4B /* MRMediaRemote.h */,
+				748B18CC2406813D00AA2C4B /* NowPlayingHelper.h */,
+				748B18CE2406813D00AA2C4B /* NowPlayingHelper.m */,
+				748B18CD2406813D00AA2C4B /* NowPlayingItem.h */,
+				748B18CF2406813D00AA2C4B /* NowPlayingItem.m */,
+			);
+			path = NowPlaying;
+			sourceTree = "<group>";
+		};
+		748B18DA2406839000AA2C4B /* ScriptSupport */ = {
+			isa = PBXGroup;
+			children = (
+				748B18C72406810B00AA2C4B /* DirectCommand.h */,
+				748B18C82406810B00AA2C4B /* DirectCommand.m */,
+				748B18C52406810B00AA2C4B /* AllCommand.h */,
+				748B18C62406810B00AA2C4B /* AllCommand.m */,
+			);
+			path = ScriptSupport;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		748B1894240680F300AA2C4B /* NeteaseControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 748B18BC240680F500AA2C4B /* Build configuration list for PBXNativeTarget "NeteaseControl" */;
+			buildPhases = (
+				748B1891240680F300AA2C4B /* Sources */,
+				748B1892240680F300AA2C4B /* Frameworks */,
+				748B1893240680F300AA2C4B /* Resources */,
+				748B18D82406819400AA2C4B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NeteaseControl;
+			productName = NeteaseControl;
+			productReference = 748B1895240680F300AA2C4B /* NeteaseControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		748B18A7240680F400AA2C4B /* NeteaseControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 748B18BF240680F500AA2C4B /* Build configuration list for PBXNativeTarget "NeteaseControlTests" */;
+			buildPhases = (
+				748B18A4240680F400AA2C4B /* Sources */,
+				748B18A5240680F400AA2C4B /* Frameworks */,
+				748B18A6240680F400AA2C4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				748B18AA240680F400AA2C4B /* PBXTargetDependency */,
+			);
+			name = NeteaseControlTests;
+			productName = NeteaseControlTests;
+			productReference = 748B18A8240680F400AA2C4B /* NeteaseControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		748B18B2240680F500AA2C4B /* NeteaseControlUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 748B18C2240680F500AA2C4B /* Build configuration list for PBXNativeTarget "NeteaseControlUITests" */;
+			buildPhases = (
+				748B18AF240680F500AA2C4B /* Sources */,
+				748B18B0240680F500AA2C4B /* Frameworks */,
+				748B18B1240680F500AA2C4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				748B18B5240680F500AA2C4B /* PBXTargetDependency */,
+			);
+			name = NeteaseControlUITests;
+			productName = NeteaseControlUITests;
+			productReference = 748B18B3240680F500AA2C4B /* NeteaseControlUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		748B188D240680F300AA2C4B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = chen;
+				TargetAttributes = {
+					748B1894240680F300AA2C4B = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					748B18A7240680F400AA2C4B = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 748B1894240680F300AA2C4B;
+					};
+					748B18B2240680F500AA2C4B = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 748B1894240680F300AA2C4B;
+					};
+				};
+			};
+			buildConfigurationList = 748B1890240680F300AA2C4B /* Build configuration list for PBXProject "NeteaseControl" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 748B188C240680F300AA2C4B;
+			productRefGroup = 748B1896240680F300AA2C4B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				748B1894240680F300AA2C4B /* NeteaseControl */,
+				748B18A7240680F400AA2C4B /* NeteaseControlTests */,
+				748B18B2240680F500AA2C4B /* NeteaseControlUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		748B1893240680F300AA2C4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				748B189C240680F400AA2C4B /* Assets.xcassets in Resources */,
+				748B189F240680F400AA2C4B /* MainMenu.xib in Resources */,
+				748B18D32406816100AA2C4B /* MusicControl.sdef in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		748B18A6240680F400AA2C4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		748B18B1240680F500AA2C4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		748B1891240680F300AA2C4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				748B18D12406813D00AA2C4B /* NowPlayingItem.m in Sources */,
+				748B18A2240680F400AA2C4B /* main.m in Sources */,
+				748B189A240680F300AA2C4B /* AppDelegate.m in Sources */,
+				748B18CA2406810B00AA2C4B /* DirectCommand.m in Sources */,
+				748B18D02406813D00AA2C4B /* NowPlayingHelper.m in Sources */,
+				748B18C92406810B00AA2C4B /* AllCommand.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		748B18A4240680F400AA2C4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				748B18AD240680F400AA2C4B /* NeteaseControlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		748B18AF240680F500AA2C4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				748B18B8240680F500AA2C4B /* NeteaseControlUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		748B18AA240680F400AA2C4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 748B1894240680F300AA2C4B /* NeteaseControl */;
+			targetProxy = 748B18A9240680F400AA2C4B /* PBXContainerItemProxy */;
+		};
+		748B18B5240680F500AA2C4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 748B1894240680F300AA2C4B /* NeteaseControl */;
+			targetProxy = 748B18B4240680F500AA2C4B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		748B189D240680F400AA2C4B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				748B189E240680F400AA2C4B /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		748B18BA240680F500AA2C4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		748B18BB240680F500AA2C4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		748B18BD240680F500AA2C4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NeteaseControl/NeteaseControl.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y9E842S9FJ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = NeteaseControl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.timidvb.NeteaseControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+			};
+			name = Debug;
+		};
+		748B18BE240680F500AA2C4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NeteaseControl/NeteaseControl.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y9E842S9FJ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = NeteaseControl/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.timidvb.NeteaseControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+			};
+			name = Release;
+		};
+		748B18C0240680F500AA2C4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y9E842S9FJ;
+				INFOPLIST_FILE = NeteaseControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timidvb.NeteaseControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeteaseControl.app/Contents/MacOS/NeteaseControl";
+			};
+			name = Debug;
+		};
+		748B18C1240680F500AA2C4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y9E842S9FJ;
+				INFOPLIST_FILE = NeteaseControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timidvb.NeteaseControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeteaseControl.app/Contents/MacOS/NeteaseControl";
+			};
+			name = Release;
+		};
+		748B18C3240680F500AA2C4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y9E842S9FJ;
+				INFOPLIST_FILE = NeteaseControlUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.timidvb.NeteaseControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NeteaseControl;
+			};
+			name = Debug;
+		};
+		748B18C4240680F500AA2C4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Y9E842S9FJ;
+				INFOPLIST_FILE = NeteaseControlUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.timidvb.NeteaseControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NeteaseControl;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		748B1890240680F300AA2C4B /* Build configuration list for PBXProject "NeteaseControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				748B18BA240680F500AA2C4B /* Debug */,
+				748B18BB240680F500AA2C4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		748B18BC240680F500AA2C4B /* Build configuration list for PBXNativeTarget "NeteaseControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				748B18BD240680F500AA2C4B /* Debug */,
+				748B18BE240680F500AA2C4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		748B18BF240680F500AA2C4B /* Build configuration list for PBXNativeTarget "NeteaseControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				748B18C0240680F500AA2C4B /* Debug */,
+				748B18C1240680F500AA2C4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		748B18C2240680F500AA2C4B /* Build configuration list for PBXNativeTarget "NeteaseControlUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				748B18C3240680F500AA2C4B /* Debug */,
+				748B18C4240680F500AA2C4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 748B188D240680F300AA2C4B /* Project object */;
+}
