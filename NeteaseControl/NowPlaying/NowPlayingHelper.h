@@ -17,6 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NowPlayingItem* nowPlayingItem;
 @property (nonatomic, strong) NSString* kNowPlayingItemDidChange;
+
+@property (nonatomic, strong) NowPlayingItem* selectedPlayingItem;
+@property (nonatomic, strong) NSString* selected;
+
 + (instancetype)sharedHelper;
 
 @end

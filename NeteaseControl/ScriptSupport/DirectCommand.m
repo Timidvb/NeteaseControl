@@ -4,35 +4,26 @@
 
 @implementation DirectCommand
 
-- (void)updateSelected {
-    NowPlayingItem *latestItem = NowPlayingHelper.sharedHelper.nowPlayingItem;
-    if([latestItem.appBundleIdentifier isEqual: _identifier]) {
-        _item = latestItem;
-    }
-}
 
 
 - (id)performDefaultImplementation {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(updateSelected) name:@"kNowPlayingItemDidChange" object:nil];
-    });
-    _identifier = [self directParameter];
-    NowPlayingItem *latestItem = NowPlayingHelper.sharedHelper.nowPlayingItem;
-    if([latestItem.appBundleIdentifier isEqual: _identifier]) {
-        _item = latestItem;
-    }
+    
+    NowPlayingHelper.sharedHelper.selected = [self directParameter];
+    NowPlayingItem *item = NowPlayingHelper.sharedHelper.selectedPlayingItem;
+    
     NSString *progress = @"";
     long trueEla = 0;
     long dur = 0;
-    if([_item.isPlaying isEqual:@"YES"]) {
-        long ela = [[NSString stringWithFormat:@"%@", _item.elapsed] longLongValue];
-        dur = [[NSString stringWithFormat:@"%@", _item.duration] longLongValue];
-        trueEla = [self getTrueElapsedTime:ela TimeStamp:_item.timeStamp];
+    if([item.isPlaying isEqual:@"YES"]) {
+        long ela = [[NSString stringWithFormat:@"%@", item.elapsed] longLongValue];
+        dur = [[NSString stringWithFormat:@"%@", item.duration] longLongValue];
+        trueEla = [self getTrueElapsedTime:ela TimeStamp:item.timeStamp];
         progress = [self getPlayingProgress:trueEla duration:dur];
     }
-    NSString *stat = [NSString stringWithFormat:@"%@*-,%@*-,%@*-,%@*-,%@*-,%@*-,%ld*-,%ld", _item.appBundleIdentifier, _item.title, _item.artist, _item.album, _item.isPlaying, progress, trueEla, dur];
-	return [NSString stringWithFormat:@"%@", stat];
+    NSString *stat = [NSString stringWithFormat:@"%@*-,%@*-,%@*-,%@*-,%@*-,%@*-,%ld*-,%ld", item.appBundleIdentifier, item.title, item.artist, item.album, item.isPlaying, progress, trueEla, dur];
+    return [NSString stringWithFormat:@"%@", stat];
+    
+    return @"abc";
 }
 
 - (NSString *)getPlayingProgress:(long) trueEla duration: (long) duration {

@@ -12,10 +12,6 @@ parameter enclosed in quotes).  */
 
 }
 
-@property (nonatomic, strong) NowPlayingItem* item;
-
-@property (nonatomic, strong) NSString* identifier;
-
 - (id)performDefaultImplementation;
 
 @end

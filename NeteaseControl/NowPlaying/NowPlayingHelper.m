@@ -39,21 +39,20 @@ static NowPlayingHelper *helper = nil;
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(updateMediaContent) name:@"kMRNowPlayingPlaybackQueueChangedNotification" object:nil];
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(updateMediaContent) name:@"kMRPlaybackQueueContentItemsChangedNotification" object:nil];
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(updateCurrentPlayingState) name:@"kMRMediaRemoteNowPlayingApplicationIsPlayingDidChangeNotification" object:nil];
+    
 }
    
 - (void)updateCurrentPlayingApp {
-    MRMediaRemoteGetNowPlayingClients(dispatch_get_global_queue(0, 0), ^(NSArray* clients) {
-        NSLog(@"%@",clients);
-        NowPlayingHelper *info = [clients firstObject];
-        if(info != nil) {
-            if(MRNowPlayingClientGetBundleIdentifier(info) != nil) {
-                NSString *appBundleIdentifier = MRNowPlayingClientGetBundleIdentifier(info);
+    MRMediaRemoteGetNowPlayingClient(dispatch_get_global_queue(0, 0), ^(id client) {
+        if(client != nil) {
+            if(MRNowPlayingClientGetBundleIdentifier(client) != nil) {
+                NSString *appBundleIdentifier = MRNowPlayingClientGetBundleIdentifier(client);
                 if(appBundleIdentifier != nil) {
                     self.nowPlayingItem.appBundleIdentifier = appBundleIdentifier;
                 }
             }
-            else if(MRNowPlayingClientGetParentAppBundleIdentifier(info) != nil) {
-                NSString *appBundleIdentifier = MRNowPlayingClientGetParentAppBundleIdentifier(info);
+            else if(MRNowPlayingClientGetParentAppBundleIdentifier(client) != nil) {
+                NSString *appBundleIdentifier = MRNowPlayingClientGetParentAppBundleIdentifier(client);
                 if(appBundleIdentifier != nil) {
                     self.nowPlayingItem.appBundleIdentifier = appBundleIdentifier;
                 }
@@ -71,12 +70,12 @@ static NowPlayingHelper *helper = nil;
             self.nowPlayingItem.title = @"";
         }
         [NSNotificationCenter.defaultCenter postNotificationName:self.kNowPlayingItemDidChange object:nil];
+        [self updateSelectedItem];
     });
 }
 
 - (void)updateMediaContent {
     MRMediaRemoteGetNowPlayingInfo(dispatch_get_global_queue(0, 0), ^(NSDictionary* info) {
-        NSLog(@"%@",info);
         if(info[kMRMediaRemoteNowPlayingInfoTitle] != nil) {
             self.nowPlayingItem.title = info[kMRMediaRemoteNowPlayingInfoTitle];
         }
@@ -97,8 +96,8 @@ static NowPlayingHelper *helper = nil;
         if(info == nil) {
             self.nowPlayingItem.isPlaying = @"NO";
         }
-        [self updateCurrentPlayingApp];
         [NSNotificationCenter.defaultCenter postNotificationName:self.kNowPlayingItemDidChange object:nil];
+        [self updateSelectedItem];
     });
 }
 - (void)updateCurrentPlayingState {
@@ -110,11 +109,44 @@ static NowPlayingHelper *helper = nil;
             self.nowPlayingItem.isPlaying = isPlaying?@"YES":@"NO";
         }
         [NSNotificationCenter.defaultCenter postNotificationName:self.kNowPlayingItemDidChange object:nil];
+        [self updateSelectedItem];
     });
 }
 
 - (void)dealloc{
     [NSNotificationCenter.defaultCenter removeObserver:self];
+}
+
+- (void)updateSelectedItem {
+    if([self.selected isEqual:self.nowPlayingItem.appBundleIdentifier]) {
+        self.selectedPlayingItem = [self.nowPlayingItem copy];
+    }
+    
+    
+    
+    MRMediaRemoteGetNowPlayingClients(dispatch_get_global_queue(0, 0), ^(NSArray * clients) {
+        for(NowPlayingHelper *info in clients) {
+            if(info != nil) {
+                if(MRNowPlayingClientGetBundleIdentifier(info) != nil) {
+                    NSString *appBundleIdentifier = MRNowPlayingClientGetBundleIdentifier(info);
+                    if(appBundleIdentifier != nil) {
+                        NSLog(@"%@", appBundleIdentifier);
+                    }
+                }
+                else if(MRNowPlayingClientGetParentAppBundleIdentifier(info) != nil) {
+                    NSString *appBundleIdentifier = MRNowPlayingClientGetParentAppBundleIdentifier(info);
+                    if(appBundleIdentifier != nil) {
+                        NSLog(@"%@", appBundleIdentifier);
+                    }
+                }
+                else {
+                    NSLog(@"no identifier");
+                }
+                
+            }
+        }
+        
+    });
 }
 
 

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NowPlayingItem : NSObject <NSObject>
+@interface NowPlayingItem : NSObject <NSCopying>
 
 @property (nonatomic, strong) NSString *appBundleIdentifier;
 @property (nonatomic, strong) NSString *title;
@@ -20,7 +20,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *elapsed;
 @property (nonatomic, strong) NSString *duration;
 @property (nonatomic, strong) NSDate *timeStamp;
-
 
 @end
 
